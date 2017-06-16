@@ -1,7 +1,8 @@
 consumes:
 - application/com.off-sync.platform.tokens.v1+json
 info:
-  title: Off-Sync.com Platform Tokens API
+  title: Platform Tokens
+  description: Off-Sync.com Platform Tokens API
   version: 0.1.0
 paths: {}
 produces:
@@ -24,8 +25,6 @@ paths:
   /:
     post:
       operationId: createToken
-      tags:
-        - tokens
       responses:
         200:
           description: create a new token
