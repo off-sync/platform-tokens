@@ -1,0 +1,33 @@
+consumes:
+- application/com.off-sync.platform.tokens.v1+json
+info:
+  title: Off-Sync.com Platform Tokens API
+  version: 0.1.0
+paths: {}
+produces:
+- application/com.off-sync.platform.tokens.v1+json
+schemes:
+- http
+swagger: "2.0"
+definitions:
+  token:
+    type: object
+    properties:
+      id:
+        type: string
+      ttl:
+        type: integer
+        format: int64
+      payload:
+        type: string
+paths:
+  /:
+    post:
+      operationId: createToken
+      tags:
+        - tokens
+      responses:
+        200:
+          description: create a new token
+          schema:
+            $ref: '#/definitions/token'
